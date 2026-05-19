@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://mirrors.tuna.tsinghua.edu.cn/myrepo/repo.spring.io' }
+        maven { url 'https://repo.spring.io/milestone' }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'six-iot-sample-xiaodu'
+

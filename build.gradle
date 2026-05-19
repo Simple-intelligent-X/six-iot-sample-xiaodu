@@ -1,0 +1,48 @@
+plugins {
+    id "org.springframework.boot" version "3.0.0"
+    id "io.spring.dependency-management" version "1.0.11.RELEASE"
+    id 'java'
+}
+
+apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.six.iot.sample'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    maven { url 'https://maven.aliyun.com/repository/spring/' }
+    maven { url 'https://mirrors.tuna.tsinghua.edu.cn/myrepo/repo.spring.io' }
+    maven { url 'https://repo.spring.io/milestone' }
+    mavenCentral()
+}
+
+ext {
+    javaMainClass = "com.six.iot.sample.VoiceApplication"
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-thymeleaf"
+    implementation "org.springframework.boot:spring-boot-starter-logging"
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    implementation "com.nimbusds:nimbus-jose-jwt:9.30.2"
+    implementation "org.bouncycastle:bcpkix-jdk18on:1.72"
+
+    implementation "com.baidu.dueros:bot-sdk:1.2.0"
+
+    //Add the SiX IAM SDK
+    implementation files('libs/sdk-1.0-SNAPSHOT.jar')
+
+    compileOnly "org.projectlombok:lombok:1.18.26"
+    annotationProcessor "org.projectlombok:lombok:1.18.26"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.9.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.9.2"
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,74 @@
+server:
+  port: 6002
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    com.six.iot: DEBUG
+#    org.springframework.boot.autoconfigure: DEBUG
+
+iam:
+  token:
+    #Replace the token URL to the URL of the app you created for XiaoDu Cloud to Cloud integration
+    endpoint: https://08d7db.app.shuhenglianchang.com/oauth2/token
+    paramName:
+      grantType: grant_type
+      assertion: assertion
+    paramValue:
+      grantType: urn:ietf:params:oauth:grant-type:jwt-bearer
+
+iot:
+  integration:
+    inboundMsg:
+      endpoint: https://int.iot.shuhenglianchang.com/iot/integration/inbound/msg
+      #Replace the integration key and keyId with the key allocated for your product
+      keyId: 14b35a9d-99f5-4256-834d-bd16514cb9f1
+      key: |
+        -----BEGIN RSA PRIVATE KEY-----
+        MIIEowIBAAKCAQEAqC7gkeLx7j93YNfs8+5wv+WPe3TSs8zi+pJgGBiXTvNhI5f4
+        u9gwgQHdHQ/yiZwkL4XjX7j6xzmdOHmZRDZWwJGr9ATkC/CUX+gogLVQVIQ3Ui2L
+        94LYX8UkzIU+CgaaHYeJSpjZ/xdGXdw9EJPwjL64UXi6ZxzKXzsAAXUor/M0WWca
+        ZHsvRobbuUTagLid88cBWfb6vCjcjVICc+8a8j57rste7GNx0ipntYHxRkA0c1Pq
+        XomExvXbdlrUsFtQ4yk8NeBGzUriH/qunIu59KFACj8oSmzpbwmFNDzJlL6GK8MB
+        H1lQjkOgwVGGapYF9qYjZUIhX0KxrZ5hdARH6QIDAQABAoIBAAlXpUjlUuwZoW+D
+        PxnjxmaagWhpumSbfoZNyEG+Z/VORrib8gi5PySDbn11S9NCFa6AIPvJwkB73lRr
+        SMzFufbzgJpLBUH2iL91HX7c04wGVi5d8lb68TsMr/kec65J5Ji8VS+MIxvs9o8z
+        Mz8vAJ9I3uNDshMVQdadZ+gs0mhHoqPWskYmR1eyAUk+CcwecvjRmr85O1zb1pVt
+        cBPzke0RQJGeAjt0rGO/eR1+EH3yiKNLjixQjYc6nKcCxqsJmvcATxS2WhXuK82r
+        Enokbb04S4a1ZmCbValPSmPTAlu7Z7j44sVXCXlpqwI3YYVvtrQjXM6bGVERpNgr
+        rYq4I0kCgYEAwFiJwDjR1czfuO57J6Mk4SBAWFfCKWKJUn+GMpeaSr8StmsmtuLe
+        jUcyXoD6ThqLf7+B6U3cUBHgy0oXz9BqXfwUl6zUNalVPPIZytdNQCfAQCJ0xTo/
+        llBtopkux+5AfrHFLZu2rnXx7203OcA/IggaNDNbmbz51Y9HlntygO0CgYEA39dI
+        KRAXpaIz/PpNKL74dvHLHLJ3BJtkuHtIayuSURY4xSr9li2rlGIxZDyjoDdpkBzm
+        ZjHIC0TgeN7qMTmCedbaRXYQwee2YD3ikTMgLRsbhhNk6L22QQmELF0BIAL60LSz
+        exsnPBBu6oq/x+n/ZwTMWfFjdXHEPg1a7UJbj20CgYB+QqBJ+gJkIhRJxOI65rDy
+        xsT2OMVPfUs/SE7DLxktL7gM3tGPA+WrP60ks+2bD3m65e9VQrL4LIQvbferhtgL
+        0cmCtwSmJP27AAFGUYZ4Mp/UecnFHbNX7HvLXFqFCzRy9ibFBY4pf2rNDBhQZI4M
+        vNzWn0/l31LwiRkpAufrEQKBgQCyWLxFA25j6VYU1XXO5kHfu42Cwuszf4CDwK6V
+        vTSqaNM4vaUpGCBibM4/uFUC3cO9MFmeyUFDQVC83ZepOtIrs7VbrNNzO+TCz+wK
+        lrqnVbbbX+6Bxk5FiYiHNF8mG1muGpv6lUrwf4NwWratWVLGyTrs2vjM5aVfb5Ko
+        AbwkDQKBgFNLTsQrIqB5AtQvXNotXIPwhMMpKPneYbgMIt+jjPcdswvji7XHEb82
+        4WvaHOULHB7BjOMzk6ho/s9DaxyOuxAYXK6TKGyNHAOGnKho1mQTyXvg22uWvv86
+        IoGjcdx5U9niX64GJ9YV0m1RGg24XcnGwQ2neMmmGCVMsknRs3Mi
+        -----END RSA PRIVATE KEY-----
+    #Replace the productId to the ID of product you created
+    productId: 655dcb820b3ad61dc370f697
+
+skill:
+  device:
+    userDevicesEndpoint: https://mgt.iot.shuhenglianchang.com/iot/device/user/devices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
