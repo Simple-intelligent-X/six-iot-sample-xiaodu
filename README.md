@@ -2,11 +2,15 @@
 
 # SiX IoT Baidu XiaoDu (DuerOS) Sample
 
+## Companion projects
+
 To build a fully integrated smart-home experience from firmware to application layer, check out our companion open-source repositories:
 
 *   **Firmware Development:** [six-iot-sdk-esp32](https://github.com/Simple-intelligent-X/six-iot-sdk-esp32) — The reference Chipset SDK for building MQTT-compliant firmware applications directly on Espressif targets.
 
 *   **Mobile Application Integration:** [six-iot-sdk-android](https://github.com/Simple-intelligent-X/six-iot-sdk-android) — The native mobile SDK providing complete blueprints for OIDC user authentication, Wi-Fi network provisioning, and device control loops.
+
+## Project Overview
 
 A **Spring Boot** reference implementation demonstrating a Cloud-to-Cloud (C2C) integration between the **SiX IoT Platform** and **Baidu XiaoDu (DuerOS)**. This repository provides a foundational smart-home skill webhook that supports device discovery and basic control operations (`turnOn`, `turnOff`).
 
